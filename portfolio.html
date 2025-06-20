@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Pixitech</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        .portfolio-item:hover .overlay {
+            opacity: 1;
+        }
+        .overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full top-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-primary tracking-tight">
+                    Pixitech
+                </a>
+                <div class="hidden md:flex space-x-12">
+                    <a href="index.html" class="text-gray-900 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#services" class="text-gray-900 hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-primary font-medium">Portfolio</a>
+                    <a href="index.html#contact" class="text-gray-900 hover:text-primary font-medium transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-primary">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Portfolio Hero Section -->
+    <section class="pt-32 pb-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">Our Portfolio</h1>
+                <p class="text-xl text-gray-600">
+                    Explore our latest projects and see how we've helped businesses transform their digital presence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg" alt="Web Design Project" class="w-full h-72 object-cover">
+                    <div class="overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">E-commerce Website</h3>
+                        <p class="text-center mb-4">Modern e-commerce platform with seamless user experience</p>
+                        <a href="#" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-100 transition">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="Mobile App Design" class="w-full h-72 object-cover">
+                    <div class="overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Mobile App Design</h3>
+                        <p class="text-center mb-4">Intuitive mobile application for fitness tracking</p>
+                        <a href="#" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-100 transition">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="Brand Identity" class="w-full h-72 object-cover">
+                    <div class="overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Brand Identity</h3>
+                        <p class="text-center mb-4">Complete brand identity design for tech startup</p>
+                        <a href="#" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-100 transition">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg" alt="Corporate Website" class="w-full h-72 object-cover">
+                    <div class="overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Corporate Website</h3>
+                        <p class="text-center mb-4">Professional website for consulting firm</p>
+                        <a href="#" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-100 transition">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="UI/UX Design" class="w-full h-72 object-cover">
+                    <div class="overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">UI/UX Design</h3>
+                        <p class="text-center mb-4">User interface design for educational platform</p>
+                        <a href="#" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-100 transition">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item relative rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg" alt="Web Application" class="w-full h-72 object-cover">
+                    <div class="overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Web Application</h3>
+                        <p class="text-center mb-4">Custom web application for project management</p>
+                        <a href="#" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-100 transition">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Ready to Start Your Project?</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Let's work together to create something amazing for your business.
+                </p>
+                <a href="index.html#contact" class="inline-block bg-primary text-white px-8 py-4 rounded-full hover:bg-gray-800 transition duration-300 font-medium">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Pixitech</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Professional web design and development services that help businesses establish a strong online presence.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-8">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition text-lg">Home</a></li>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-white transition text-lg">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-white transition text-lg">Portfolio</a></li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition text-lg">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-8">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-lg text-gray-300">
+                            <i class="far fa-envelope mr-4"></i>
+                            info@pixitech.net
+                        </li>
+                        <li class="flex items-center text-lg text-gray-300">
+                            <i class="fas fa-phone mr-4"></i>
+                            +1 234 567 890
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Pixitech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+</body>
+</html>
